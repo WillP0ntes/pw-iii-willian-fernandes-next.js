@@ -14,7 +14,7 @@ async function connectToDatabase() {
 
 
 export default async function handler(req, res) {
-    if (req.method !== 'DELET') {
+    if (req.method !== 'DELETE') {
         return res.status(405).json({ error: 'Metodo não permitido' });
     }
 
@@ -29,7 +29,7 @@ export default async function handler(req, res) {
         const connection = await connectToDatabase();
 
 
-        const [result] = await connection.execute('DELET FROM users WHERE id = ?', [id]);
+        const [result] = await connection.execute('DELETE FROM users WHERE id = ?', [id]);
 
 
         await connection.end();
