@@ -1,35 +1,36 @@
-import Head from 'next/head';
-import Navbar from './components/Navbar';
-
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Portfólio</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
-      <Navbar />
-      <main className="p-6">
-        <section id="sobre" className="mb-10">
-          <h1 className="text-3x1 font-bold">Olá! Eu sou Willian Fernandes</h1>
-          <p className="mt-2 text-gray-700">Desenvolvedor em formação. Procuro melhorar minhas habilidades cada vez mais via cursos e pesquisas</p>
-        </section>
+      <section id="inicial">
+        <h1>Olá, eu sou Will</h1>
+        <p>Desenvolvedor em formação.</p>
+      </section>
 
-        <section id="projetos" className="mb-10 bg-gray-100 p-6 rounded">
-          <h2 className="text-2x1 font-semibold mb-4">Projetos</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="bg-white p-4 shadow rounded">
-              <h1>TCC Etec</h1>
-              <p>O projeto de TCC que estou realizando junto dos meus colegas consiste em um sistema cujo objetivo é auxiliar ONGs na administração de seus gastos, voluntarios e projetos</p>
-            </div>
-          </div>
-        </section>
+      <section id="sobre">
+        <h2>Sobre Mim</h2>
+        <div className="card">
+          <h3>Minha trajetória</h3>
+          <p>Sou um desenvolvedor focado em areas backend. Tenho experiência com tecnologias modernas como JavaScript, HTML, CSS e frameworks, estou sempre em busca de aprender mais.</p>
+        </div>
+      </section>
 
-        <section id="contato">
-          <h2 className="text-2x1 font-semibold mb-2">Contato</h2>
-          <p>Você pode entrar em contato comigo no email: w.willian.1805@gmail.com</p>
-        </section>
-      </main>
+      <section id="projetos">
+        <h2>Projetos</h2>
+        <div className="card">
+          <h3>ONGManager</h3>
+          <p>ONGManager é um projeto de TCC do curso tecnico de Desenvolvimento de Sistemas na ETEC Camargo Aranha.</p>
+          <p>ONGManager é uma aplicação que ajuda ONGs a lidar com seus recursos, projetos e volintarios de uma forma mais eficiente e moderna.</p>
+        </div>
+      </section>
+
+      <section id="contato">
+        <h2>Contato</h2>
+        <div className="card">
+          <h3>Fale comigo</h3>
+          <p>E-mail: w.willian.1805@gmail.com</p>
+          <p>Telefone: +55 11 98860-9387</p>
+        </div>
+      </section>
     </>
   );
 }
